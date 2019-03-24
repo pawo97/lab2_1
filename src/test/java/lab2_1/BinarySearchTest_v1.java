@@ -58,4 +58,9 @@ public class BinarySearchTest_v1 {
         SearchResult result = BinarySearch.search(6, tab);
         Assert.assertThat(result.isFound(), is(false));
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void thrownIllegalArgumentException() {
+        BinarySearch.search(0, new int[0]);
+    }
 }
